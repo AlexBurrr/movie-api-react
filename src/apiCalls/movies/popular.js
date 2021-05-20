@@ -17,7 +17,7 @@ export const Popular = () => {
 
     return (
         <div>
-
+            {console.log(pop)}
         </div>
     )
 }
