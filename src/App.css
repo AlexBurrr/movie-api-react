@@ -12,9 +12,12 @@ html{
 
 body{
   background-color: black;
+  
 }
 
 .App{
-  
   display: flex;
+  height: 100vh;
+max-width:150rem;
+margin: 0 auto;
 }
