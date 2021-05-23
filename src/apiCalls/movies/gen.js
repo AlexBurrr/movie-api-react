@@ -1,18 +1,25 @@
-import React, { useEffect } from 'react'
-import { API_KEY } from '../apiVariables'
+import React, { useEffect, useState } from 'react'
+import { API_KEY, trendingMedia } from '../apiVariables'
 import axios from 'axios'
 
 
-console.log(API_KEY);
 
 
-export const Gen = () => {
+
+export const HeroData = ({ }) => {
+    const [heroData, setHeroData] = useState('')
+
 
     useEffect(() => {
-        axios.get()
-    })
+        axios.get(trendingMedia)
+            .then(res => {
+                setHeroData(res.data.results[Math.floor(Math.random() * 21)]);
+            })
+    }, [])
+
+
     return (
-        <div></div>
+        <div>{}</div>
     )
 
 
@@ -22,4 +29,4 @@ export const Gen = () => {
 
 
 
-export default Gen
+export default HeroData
