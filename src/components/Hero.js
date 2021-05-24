@@ -10,7 +10,7 @@ const HeroContainer = styled.div`
 color: #fff;
 position: relative;
 display: flex;
-height: 55rem;
+height: 53.5rem;
 min-width: 135rem;
 margin: 0 auto ;
 `
@@ -34,14 +34,15 @@ left: 15%;
 `
 const HeroTitle = styled.h1`
 padding-bottom: 2rem;
-font-size: 3rem;
+font-size: 3.5rem;
 `
 const MiscDetails = styled.div`
 display: flex;
-justify-content: end;
 color: #999999;
 font-size: 1.5rem;
-padding-bottom: 2rem;`
+padding-bottom: 2rem;
+
+`
 
 const HeroOverview = styled.div`
 overflow:visible;
@@ -57,8 +58,8 @@ width: 18rem;
 height: 5rem;
 background-color: #202124;
 align-items: center;
-padding-left: 5rem;
-padding-top: 1.5rem;
+padding-left: 4.5rem;
+padding-top: 2rem;
 cursor: pointer;
 font-size: 1.5rem;
 
@@ -91,7 +92,12 @@ height: 100%;
 `
 
 
-
+const MiscSpan = styled.span`
+position: relative;
+margin-left: 2rem;
+margin-bottom: -10rem;
+z-index: 100;
+`
 
 
 
@@ -112,7 +118,6 @@ const Hero = () => {
             })
     }, [])
 
-    console.log(heroData);
     localStorage.setItem('hero ID', heroID);
 
     return (
@@ -128,7 +133,8 @@ const Hero = () => {
                             value={heroData.vote_average / 2}
                             size={15}
                             edit={false}
-                            color2={'#2097F3'} />,  {heroData.vote_count} reviews release date: {heroData.release_date}
+                            color2={'#2097F3'} />
+                        <MiscSpan className='hero-misc'> {heroData.vote_count} reviews, {heroData.release_date || heroData.first_air_date}</MiscSpan>
 
                     </MiscDetails>
                     <HeroOverview>{heroData.overview}</HeroOverview>

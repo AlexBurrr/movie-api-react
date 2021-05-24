@@ -8,7 +8,7 @@ import { BiSearch } from 'react-icons/bi';
 
 const NavContainer = styled.div`
 position: sticky;
-width: 10rem;
+width: 11rem;
 height: 100vh;
 margin: 0 auto;
 background-color: #000000;
@@ -36,11 +36,12 @@ a{
 
 
 li{
-    margin: 50% 0;
+    padding: 28% 0;
     list-style: none;
     text-decoration:none;
     font-size: 3.2rem;
     color: #fff;
+    padding-left: 1rem;
     
     
     

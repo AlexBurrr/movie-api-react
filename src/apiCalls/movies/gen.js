@@ -1,25 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import { API_KEY, trendingMedia } from '../apiVariables'
-import axios from 'axios'
+import React from 'react'
 
 
 
 
 
-export const HeroData = ({ }) => {
-    const [heroData, setHeroData] = useState('')
-
-
-    useEffect(() => {
-        axios.get(trendingMedia)
-            .then(res => {
-                setHeroData(res.data.results[Math.floor(Math.random() * 21)]);
-            })
-    }, [])
+export const HeroData = () => {
 
 
     return (
-        <div>{}</div>
+        <div></div>
     )
 
 
