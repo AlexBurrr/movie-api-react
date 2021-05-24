@@ -1,8 +1,9 @@
+
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 import { trendingMedia } from '../apiCalls/apiVariables'
-
+import ReactStars from 'react-stars'
 import HeroData from '../apiCalls/movies/gen'
 
 const HeroContainer = styled.div`
@@ -15,7 +16,7 @@ margin: 0 auto ;
 `
 const HeroDetailsWrapper = styled.div`
 position: relative;
-width: 30%;
+width: 25%;
 
 
 `
@@ -23,10 +24,10 @@ width: 30%;
 
 const HeroDetails = styled.div`
 position: absolute;
-width: 100%;
+width: 140%;
 z-index: 100;
 top: 25%;
-left: 10%;
+left: 15%;
 
 
 
@@ -36,6 +37,8 @@ padding-bottom: 2rem;
 font-size: 3rem;
 `
 const MiscDetails = styled.div`
+display: flex;
+justify-content: end;
 color: #999999;
 font-size: 1.5rem;
 padding-bottom: 2rem;`
@@ -59,16 +62,13 @@ padding-top: 1.5rem;
 cursor: pointer;
 font-size: 1.5rem;
 
-
-
-
 `
 
 
 
 const HeroImgContainer = styled.div`
 position: relative;
-width: 70%;
+width: 75%;
 
 &:after{
     position: absolute;
@@ -93,11 +93,14 @@ height: 100%;
 
 
 
+
+
 const Hero = () => {
     const [heroData, setHeroData] = useState('')
     const [heroID, setHeroID] = useState('')
     const [heroPoster, setHeroPoster] = useState('')
     const randomNumber = Math.floor(Math.random() * 21)
+
 
 
     useEffect(() => {
@@ -119,7 +122,15 @@ const Hero = () => {
             <HeroDetailsWrapper>
                 <HeroDetails>
                     <HeroTitle>{heroData.title || heroData.name}</HeroTitle>
-                    <MiscDetails>stars, {heroData.popularity}, seasons, etc</MiscDetails>
+                    <MiscDetails>
+                        <ReactStars
+                            count={5}
+                            value={heroData.vote_average / 2}
+                            size={15}
+                            edit={false}
+                            color2={'#2097F3'} />,  {heroData.vote_count} reviews release date: {heroData.release_date}
+
+                    </MiscDetails>
                     <HeroOverview>{heroData.overview}</HeroOverview>
                     <TrailerBtn>Watch Trailer</TrailerBtn>
 
