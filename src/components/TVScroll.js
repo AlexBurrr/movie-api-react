@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import MediaCard from './MediaCard'
 import axios from 'axios'
-import { trendingMovies } from '../apiCalls/apiVariables'
-
+import { trendingTV } from '../apiCalls/apiVariables'
 const PosterContainer = styled.div`
 position: relative;
 width: 100%;
@@ -21,14 +20,15 @@ position: absolute;
 cursor: pointer;
 padding-top: 2rem;
 display: flex;
-`
+overflow-x: scroll;`
 
-const PosterScroll = ({ title }) => {
+
+const TVScroll = ({ title }) => {
     const [movieData, setMovieData] = useState([])
 
 
     useEffect(() => {
-        axios.get(trendingMovies)
+        axios.get(trendingTV)
             .then(res => {
                 setMovieData(res.data.results)
             })
@@ -53,4 +53,4 @@ const PosterScroll = ({ title }) => {
     )
 }
 
-export default PosterScroll
+export default TVScroll
