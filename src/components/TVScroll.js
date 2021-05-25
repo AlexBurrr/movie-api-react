@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import MediaCard from './MediaCard'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import { trendingTV } from '../apiCalls/apiVariables'
 const PosterContainer = styled.div`
 position: relative;
@@ -43,7 +44,13 @@ const TVScroll = ({ title }) => {
             </ScrollTitle>
             <CardContainer>
                 {movieData.map((movie, index) => (
-                    <MediaCard key={index} movieTitle={movie.title} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
+                    <span key={index} onClick={() => localStorage.setItem('tv id', `${movie.id}`)}>
+                        <Link to='/info'>
+                            <MediaCard movieTitle={movie.title} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
+
+                        </Link>
+
+                    </span>
                 ))}
             </CardContainer>
 

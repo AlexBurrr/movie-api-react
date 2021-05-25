@@ -33,10 +33,10 @@ font-size: 1.4rem;
 padding-bottom: 1rem;
 `
 
-
 const mediaCard = ({ movieTitle, rating, image }) => {
     return (
-        <CardContainer>
+
+        <CardContainer >
             <CardImgWrapper>
                 <CardImg src={image} />
             </CardImgWrapper>

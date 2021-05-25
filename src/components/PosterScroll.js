@@ -41,9 +41,14 @@ const PosterScroll = ({ title }) => {
             <ScrollTitle>
                 {title}
             </ScrollTitle>
-            <CardContainer>
+            <CardContainer >
                 {movieData.map((movie, index) => (
-                    <MediaCard key={index} movieTitle={movie.title} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
+                    <span key={index} onClick={() => localStorage.setItem('id', `${movie.id}`)}>
+                        <MediaCard movieTitle={movie.title} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
+
+                    </span>
+
+
                 ))}
             </CardContainer>
 

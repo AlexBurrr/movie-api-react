@@ -19,7 +19,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <FooterP>© 2021 Alexandro Berumen. All rights reserved. </FooterP>
-            <FooterP>Designed by Jason Ujma-Alvis, built by me, data provided by TMDb.</FooterP>
+            <FooterP>data provided by TMDb.</FooterP>
         </FooterContainer>
     )
 }
