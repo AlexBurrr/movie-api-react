@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import MediaCard from './MediaCard'
 import axios from 'axios'
 import { trendingMovies } from '../apiCalls/apiVariables'
+import { Link } from 'react-router-dom'
 
 const PosterContainer = styled.div`
 position: relative;
@@ -21,6 +22,12 @@ position: absolute;
 cursor: pointer;
 padding-top: 2rem;
 display: flex;
+`
+const StyledLink = styled(Link)`
+
+color: #fff;
+text-decoration: none;
+
 `
 
 const PosterScroll = ({ title }) => {
@@ -44,7 +51,10 @@ const PosterScroll = ({ title }) => {
             <CardContainer >
                 {movieData.map((movie, index) => (
                     <span key={index} onClick={() => localStorage.setItem('id', `${movie.id}`)}>
-                        <MediaCard movieTitle={movie.title} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
+                        <StyledLink to='/info'>
+                            <MediaCard movieTitle={movie.title} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
+
+                        </StyledLink>
 
                     </span>
 

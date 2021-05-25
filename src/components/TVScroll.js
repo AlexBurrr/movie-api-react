@@ -23,6 +23,13 @@ padding-top: 2rem;
 display: flex;
 overflow-x: scroll;`
 
+const StyledLink = styled(Link)`
+color: #fff;
+text-decoration: none;
+
+`
+
+
 
 const TVScroll = ({ title }) => {
     const [movieData, setMovieData] = useState([])
@@ -45,10 +52,10 @@ const TVScroll = ({ title }) => {
             <CardContainer>
                 {movieData.map((movie, index) => (
                     <span key={index} onClick={() => localStorage.setItem('tv id', `${movie.id}`)}>
-                        <Link to='/info'>
-                            <MediaCard movieTitle={movie.title} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
+                        <StyledLink to='/info'>
+                            <MediaCard movieTitle={movie.name} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
 
-                        </Link>
+                        </StyledLink >
 
                     </span>
                 ))}
