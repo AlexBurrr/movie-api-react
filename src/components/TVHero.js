@@ -24,7 +24,7 @@ const HeroDetails = styled.div`
 position: absolute;
 width: 140%;
 z-index: 100;
-top: 25%;
+top: 20%;
 left: 15%;
 
 
@@ -43,10 +43,14 @@ padding-bottom: 2rem;
 `
 
 const HeroOverview = styled.div`
-overflow:visible;
-padding-bottom: 2rem;
-font-size: 1.5rem;
-line-height: 2.5rem;
+overflow: visible; 
+    padding-bottom: 3rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+   
+    height: 20rem;
 `
 const TrailerBtn = styled.div`
 position: relative;

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import TVHero from '../components/TVHero'
+import MediaOverview from '../components/MediaOverview'
+
 
 
 const InfoContainer = styled.div`
@@ -25,6 +27,7 @@ const TVInfo = () => {
     return (
         <InfoContainer>
             <TVHero />
+            <MediaOverview x={'tv'} />
         </InfoContainer>
     )
 }
