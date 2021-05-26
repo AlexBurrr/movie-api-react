@@ -4,7 +4,8 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import Movies from './pages/Movies'
 import TV from './pages/TV'
-import MediaInfo from './pages/MediaInfo'
+import MovieInfo from './pages/MovieInfo'
+import TVInfo from './pages/TVInfo'
 
 
 
@@ -20,7 +21,8 @@ function App() {
           <Route path='/' component={Home} exact />
           <Route path='/movies' component={Movies} exact />
           <Route path='/tv' component={TV} exact />
-          <Route path='/info' component={MediaInfo} exact />
+          <Route path='/movieinfo' component={MovieInfo} exact />
+          <Route path='/tvinfo' component={TVInfo} exact />
 
 
         </Switch>

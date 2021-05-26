@@ -51,8 +51,8 @@ const TVScroll = ({ title }) => {
             </ScrollTitle>
             <CardContainer>
                 {movieData.map((movie, index) => (
-                    <span key={index} onClick={() => localStorage.setItem('tv id', `${movie.id}`)}>
-                        <StyledLink to='/info'>
+                    <span key={index} onClick={() => localStorage.setItem('TV id', `${movie.id}`)}>
+                        <StyledLink to='/tvinfo'>
                             <MediaCard movieTitle={movie.name} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
 
                         </StyledLink >

@@ -30,7 +30,7 @@ text-decoration: none;
 
 `
 
-const PosterScroll = ({ title }) => {
+const MovieScroll = ({ title }) => {
     const [movieData, setMovieData] = useState([])
 
 
@@ -50,8 +50,8 @@ const PosterScroll = ({ title }) => {
             </ScrollTitle>
             <CardContainer >
                 {movieData.map((movie, index) => (
-                    <span key={index} onClick={() => localStorage.setItem('id', `${movie.id}`)}>
-                        <StyledLink to='/info'>
+                    <span key={index} onClick={() => localStorage.setItem('movie id', `${movie.id}`)}>
+                        <StyledLink to='/movieinfo'>
                             <MediaCard movieTitle={movie.title} rating={movie.vote_average / 2} image={imageurl + movie.poster_path} />
 
                         </StyledLink>
@@ -68,4 +68,4 @@ const PosterScroll = ({ title }) => {
     )
 }
 
-export default PosterScroll
+export default MovieScroll

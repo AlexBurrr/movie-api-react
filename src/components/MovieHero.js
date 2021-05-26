@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import { trendingMedia } from '../apiCalls/apiVariables'
 import ReactStars from 'react-stars'
+
 
 const HeroContainer = styled.div`
 color: #fff;
@@ -100,27 +100,22 @@ z-index: 100;
 
 
 
-const Hero = () => {
+const HeroID = () => {
     const [heroData, setHeroData] = useState('')
-    const [heroID, setHeroID] = useState('')
     const [heroPoster, setHeroPoster] = useState('')
-    const randomNumber = Math.floor(Math.random() * 21)
-
 
 
     useEffect(() => {
-        axios.get(trendingMedia)
+        axios.get(`https://api.themoviedb.org/3/movie/${localStorage.getItem('movie id')}?api_key=21ac8eec01fc0e49780c1a2d65e30dc1&language=en-US`)
             .then(res => {
-                setHeroData(res.data.results[randomNumber])
-                setHeroID(res.data.results[randomNumber].id)
-                setHeroPoster(`https://image.tmdb.org/t/p/original/${res.data.results[randomNumber].backdrop_path}`)
+                setHeroData(res.data)
+                setHeroPoster(`https://image.tmdb.org/t/p/original/${res.data.backdrop_path}`)
             })
     }, [])
-
-    localStorage.setItem('hero ID', heroID);
+    // console.log(movieInfo);
+    console.log(heroData);
 
     return (
-
         <HeroContainer>
 
             <HeroDetailsWrapper>
@@ -148,4 +143,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default HeroID
