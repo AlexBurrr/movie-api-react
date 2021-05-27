@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import axios from 'axios'
 import TVHero from '../components/TVHero'
 import MediaOverview from '../components/MediaOverview'
+import Footer from '../components/Footer'
+import Actors from '../components/Actors'
+
+
 
 
 
@@ -28,6 +32,8 @@ const TVInfo = () => {
         <InfoContainer>
             <TVHero />
             <MediaOverview x={'tv'} />
+            <Actors x={'tv'} />
+            <Footer />
         </InfoContainer>
     )
 }

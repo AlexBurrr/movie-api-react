@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import axios from 'axios'
 import MovieHero from '../components/MovieHero'
 import MediaOverview from '../components/MediaOverview'
+import Footer from '../components/Footer'
+import Actors from '../components/Actors'
 
 const InfoContainer = styled.div`
 color: #fff;
@@ -27,6 +29,9 @@ const MovieInfo = () => {
         <InfoContainer>
             <MovieHero />
             <MediaOverview x={'movie'} />
+            <Actors x={'movie'} />
+            <Footer />
+
         </InfoContainer>
     )
 }

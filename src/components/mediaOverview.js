@@ -49,7 +49,6 @@ font-size: 1.5rem;
 `
 
 
-
 const MediaOverview = ({ x }) => {
     const media = x
     const movieInfo = `https://api.themoviedb.org/3/movie/${localStorage.getItem('movie id')}?api_key=21ac8eec01fc0e49780c1a2d65e30dc1&language=en-US`
@@ -69,6 +68,7 @@ const MediaOverview = ({ x }) => {
                 setOverviewData(res.data);
                 setNetworks(res.data.networks);
                 setLanguage(res.data.spoken_languages)
+                localStorage.setItem('actors ID', res.data.id)
 
                 if (res.data.budget) {
                     setBudget((res.data.budget).toLocaleString())
@@ -84,7 +84,7 @@ const MediaOverview = ({ x }) => {
             })
     }, [])
 
-
+    // localStorage.setItem('actors ID', overviewData.id)
 
 
     let movieLength = `${Math.floor((overviewData.runtime) / 60)}hr ${(overviewData.runtime % 60)}min`
@@ -102,7 +102,7 @@ const MediaOverview = ({ x }) => {
                 <Spans><SpansTwo>Budget</SpansTwo>{budget}</Spans>
                 <Spans><SpansTwo>Revenue</SpansTwo>{revenue}</Spans>
                 <Spans><SpansTwo>Genres</SpansTwo>{genres.map((x, index) => (
-                    <span key={index}>{`${x.name}   `}</span>
+                    <span key={index}>{`${x.name},   `}</span>
                 ))}</Spans>
 
             </TextInfo>
@@ -116,7 +116,7 @@ const MediaOverview = ({ x }) => {
                         <span key={index}> {` ${time}min`}</span>
                     ))}</Spans>
                     <Spans><SpansTwo>Genres</SpansTwo>{genres.map((x, index) => (
-                        <span key={index}>{`${x.name}   `}</span>
+                        <span key={index}>{`${x.name},   `}</span>
                     ))}</Spans>
                     <Spans><SpansTwo>Seasons</SpansTwo>{overviewData.number_of_seasons}</Spans>
                     <Spans><SpansTwo>Episodes</SpansTwo>{overviewData.number_of_episodes}</Spans>
