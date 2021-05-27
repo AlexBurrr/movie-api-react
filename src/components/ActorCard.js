@@ -6,14 +6,13 @@ position: relative;
 height: auto;
 width: 100%;
 background-color: #141414;
-padding: 5rem;
+padding-right: 1rem;
+padding-top: 3rem;
 
 `
 
-const Title = styled.h1`
-padding-bottom: 3rem;
 
-`
+
 
 const Card = styled.div`
 position: relative;
@@ -26,28 +25,34 @@ const ActorImg = styled.img`
 position: relative;
 height: 30rem;
 width: 20rem;
-background-color: red;
 
 `
 const ActorName = styled.span`
 position: relative;
 height: 2.5rem;
 width: 20rem;
-background-color: blue;`
+font-size: 1.4rem;
+`
 const ActorCharacter = styled.span`
 position: relative;
 height: 2.5rem;
 width: 20rem;
-background-color: yellow;`
+font-size: 1.4rem;
+color:#80868A;
+`
+
+
+
+
 
 const ActorCard = ({ image, actorName, actorCharacter }) => {
     return (
         <CardContainer>
-            <Title>Cast</Title>
+
             <Card>
                 <ActorImg src={image} />
-                <ActorName>{ActorName}</ActorName>
-                <ActorCharacter>{ActorCharacter}</ActorCharacter>
+                <ActorName>{actorName}</ActorName>
+                <ActorCharacter>{actorCharacter}</ActorCharacter>
             </Card>
         </CardContainer>
     )

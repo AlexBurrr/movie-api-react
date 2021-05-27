@@ -5,9 +5,25 @@ import ActorCard from '../components/ActorCard'
 
 
 const Container = styled.div`
-height: 10rem; 
-width: 10rem;
+position: relative;
+height: 60rem; 
+width: 100%;
+background-color: #141414;
+overflow-x: scroll;
 `
+
+const Title = styled.h1`
+position: relative;
+padding-left: 5rem;
+`
+
+const Slider = styled.div`
+position: absolute;
+display: flex;
+overflow-x: auto;
+padding-left: 5rem;
+`
+
 
 const Actors = ({ x }) => {
 
@@ -29,16 +45,20 @@ const Actors = ({ x }) => {
     }, [])
 
 
-    console.log(crew);
 
+    console.log(crew);
     return (
         <Container>
-            {/* {crew.map((a, index) => (
-                <div key={index}>
-                    <ActorCard image={`https://image.tmdb.org/t/p/original/${a.profile_path}`} actorCharacter={a.character} actorName={a.name} />
+            <Title>Cast</Title>
+            <Slider>
+                {crew.map((x, index) => (
+                    <div key={index}>
+                        <ActorCard image={`https://image.tmdb.org/t/p/original/${x.profile_path}`} actorName={x.name} actorCharacter={x.character} />
+                    </div>
+                ))}
 
-                </div>
-            ))} */}
+            </Slider>
+
 
         </Container>
     )
