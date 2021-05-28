@@ -5,6 +5,7 @@ import TVHero from '../components/TVHero'
 import MediaOverview from '../components/MediaOverview'
 import Footer from '../components/Footer'
 import Actors from '../components/Actors'
+// import MoreLikeThis from '../components/MoreLikeThis'
 
 
 
@@ -25,7 +26,7 @@ const TVInfo = () => {
             .then(res => {
                 console.log(res.data);
             })
-    })
+    }, [])
 
 
     return (
@@ -33,6 +34,7 @@ const TVInfo = () => {
             <TVHero />
             <MediaOverview x={'tv'} />
             <Actors x={'tv'} />
+            {/* <MoreLikeThis /> */}
             <Footer />
         </InfoContainer>
     )
