@@ -5,6 +5,7 @@ import MovieHero from '../components/MovieHero'
 import MediaOverview from '../components/MediaOverview'
 import Footer from '../components/Footer'
 import Actors from '../components/Actors'
+import ScrollToTop from '../components/ScrollToTop';
 
 const InfoContainer = styled.div`
 color: #fff;
@@ -27,6 +28,7 @@ const MovieInfo = () => {
 
     return (
         <InfoContainer>
+            <ScrollToTop />
             <MovieHero />
             <MediaOverview x={'movie'} />
             <Actors x={'movie'} />

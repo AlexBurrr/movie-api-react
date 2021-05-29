@@ -5,6 +5,7 @@ import TVHero from '../components/TVHero'
 import MediaOverview from '../components/MediaOverview'
 import Footer from '../components/Footer'
 import Actors from '../components/Actors'
+import ScrollToTop from '../components/ScrollToTop';
 // import MoreLikeThis from '../components/MoreLikeThis'
 
 
@@ -31,6 +32,7 @@ const TVInfo = () => {
 
     return (
         <InfoContainer>
+            <ScrollToTop />
             <TVHero />
             <MediaOverview x={'tv'} />
             <Actors x={'tv'} />
