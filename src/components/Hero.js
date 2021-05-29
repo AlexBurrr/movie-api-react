@@ -121,14 +121,14 @@ const Hero = () => {
     }, [])
 
     localStorage.setItem('hero ID', heroID);
-
+    // heroData.title || heroData.name
     return (
 
         <HeroContainer>
 
             <HeroDetailsWrapper>
                 <HeroDetails>
-                    <HeroTitle>{heroData.title || heroData.name}</HeroTitle>
+                    <HeroTitle>{heroData.title === undefined ? heroData.name : heroData.title}</HeroTitle>
                     <MiscDetails>
                         <ReactStars
                             count={5}
