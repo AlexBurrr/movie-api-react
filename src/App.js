@@ -6,6 +6,7 @@ import Movies from './pages/Movies'
 import TV from './pages/TV'
 import MovieInfo from './pages/MovieInfo'
 import TVInfo from './pages/TVInfo'
+import Search from './pages/Search'
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/tv' component={TV} exact />
           <Route path='/movieinfo' component={MovieInfo} exact />
           <Route path='/tvinfo' component={TVInfo} exact />
+          <Route path='/search' component={Search} exact />
 
 
         </Switch>

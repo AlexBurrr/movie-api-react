@@ -70,7 +70,9 @@ const Nav = () => {
 
                     </Link>
 
-                    <li><BiSearch /></li>
+                    <Link to='/search'>
+                        <li><BiSearch /></li>
+                    </Link>
 
 
                 </ul>
