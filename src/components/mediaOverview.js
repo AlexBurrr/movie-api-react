@@ -6,8 +6,11 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 background-color: #141414;
-width: 100%;
-height: auto;
+position: relative;
+/* width: 100%; */
+/* height: auto; */
+min-width: 135rem;
+margin: 0 auto ;
 color: #fff;`
 
 const InfoContainer = styled.div`
