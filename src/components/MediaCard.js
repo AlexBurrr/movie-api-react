@@ -38,7 +38,7 @@ const mediaCard = ({ movieTitle, rating, image }) => {
 
         <CardContainer >
             <CardImgWrapper>
-                <CardImg src={image} />
+                <CardImg src={image} alt={'hi'} />
             </CardImgWrapper>
 
             <MovieTitle>{movieTitle}</MovieTitle>
