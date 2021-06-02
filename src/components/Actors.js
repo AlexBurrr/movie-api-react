@@ -44,7 +44,7 @@ const Actors = ({ x }) => {
                 setCrew(res.data.cast)
 
             })
-    }, [])
+    }, [crew])
 
 
 
