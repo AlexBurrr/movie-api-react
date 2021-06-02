@@ -33,12 +33,12 @@ font-size: 1.4rem;
 padding-bottom: 1rem;
 `
 
-const mediaCard = ({ movieTitle, rating, image }) => {
+const MediaCard = ({ movieTitle, rating, image }) => {
     return (
 
         <CardContainer >
             <CardImgWrapper>
-                <CardImg src={image} alt={'hi'} />
+                <CardImg src={image} alt={'hi, no img available ):'} />
             </CardImgWrapper>
 
             <MovieTitle>{movieTitle}</MovieTitle>
@@ -54,4 +54,4 @@ const mediaCard = ({ movieTitle, rating, image }) => {
     )
 }
 
-export default mediaCard
+export default MediaCard
