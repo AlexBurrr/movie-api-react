@@ -33,7 +33,7 @@ const MovieInfo = () => {
             <MovieHero />
             <MediaOverview x={'movie'} />
             <Actors x={'movie'} />
-            <Similar />
+            <Similar movie={'movie'} />
             <Footer />
 
         </InfoContainer>

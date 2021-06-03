@@ -37,7 +37,7 @@ const TVInfo = () => {
             <TVHero />
             <MediaOverview x={'tv'} />
             <Actors x={'tv'} />
-            <Similar />
+            <Similar x={'tv'} />
             <Footer />
         </InfoContainer>
     )
