@@ -66,6 +66,13 @@ padding-top: 2rem;
 cursor: pointer;
 font-size: 1.5rem;
 
+transition: .2s ease-in-out;
+
+&:hover{
+    opacity: .9;
+    color: #1F98F3;
+}
+
 `
 
 

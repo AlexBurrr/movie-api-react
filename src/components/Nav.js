@@ -42,8 +42,11 @@ li{
     font-size: 3.2rem;
     color: #fff;
     padding-left: 1rem;
+    transition: .2s ease-in-out;
     
-    
+    &:hover{
+        color: #1F98F3;
+    }
     
     
 }

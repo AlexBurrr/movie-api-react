@@ -8,7 +8,12 @@ width: 100%;
 background-color: #141414;
 padding-right: 1rem;
 padding-top: 3rem;
+&:hover{
+    transform: scale(1.02);
+    transition: .2s ease-in-out;
+}
 
+cursor:pointer;
 `
 
 
