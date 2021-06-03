@@ -6,7 +6,7 @@ import ActorCard from '../components/ActorCard'
 
 const Container = styled.div`
 position: relative;
-height: 60rem; 
+height: 50rem; 
 width: 100%;
 background-color: #141414;
 overflow-x: scroll;
@@ -33,8 +33,8 @@ const Actors = ({ x }) => {
     // const [searchID, setSearchID] = useState('')
     // setSearchID(localStorage.getItem('actor ID'))
 
-    const tvActors = `https://api.themoviedb.org/3/tv/${localStorage.getItem('actors ID')}/credits?api_key=21ac8eec01fc0e49780c1a2d65e30dc1`
-    const movieActors = `https://api.themoviedb.org/3/movie/${localStorage.getItem('actors ID')}/credits?api_key=21ac8eec01fc0e49780c1a2d65e30dc1`
+    const tvActors = `https://api.themoviedb.org/3/tv/${localStorage.getItem('TV id')}/credits?api_key=21ac8eec01fc0e49780c1a2d65e30dc1`
+    const movieActors = `https://api.themoviedb.org/3/movie/${localStorage.getItem('movie id')}/credits?api_key=21ac8eec01fc0e49780c1a2d65e30dc1`
     const [crew, setCrew] = useState([])
 
     useEffect(() => {
@@ -44,8 +44,7 @@ const Actors = ({ x }) => {
                 setCrew(res.data.cast)
 
             })
-    }, [crew])
-
+    }, [setCrew])
 
 
     console.log(crew);

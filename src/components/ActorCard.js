@@ -16,7 +16,7 @@ padding-top: 3rem;
 
 const Card = styled.div`
 position: relative;
-height: 35rem;
+height: 100%;
 width: 20rem;
 display: flex;
 flex-direction: column;
