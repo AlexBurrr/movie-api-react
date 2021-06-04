@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 import ActorCard from '../components/ActorCard'
+import { Link } from 'react-router-dom'
 
 
 const Container = styled.div`
@@ -25,7 +26,12 @@ display: flex;
 padding-left: 5rem;
 
 `
+const StyledLink = styled(Link)`
 
+color: #fff;
+text-decoration: none;
+
+`
 
 const Actors = ({ x }) => {
 
@@ -57,8 +63,11 @@ const Actors = ({ x }) => {
 
                 <Slider>
                     {crew.map((x, index) => (
-                        <div key={index}>
-                            <ActorCard image={`https://image.tmdb.org/t/p/original/${x.profile_path}`} actorName={x.name} actorCharacter={x.character} />
+                        <div onClick={() => { localStorage.setItem('Actors ID', x.id) }} key={index}>
+                            <StyledLink to='/actor'>
+                                <ActorCard image={`https://image.tmdb.org/t/p/original/${x.profile_path}`} actorName={x.name} actorCharacter={x.character} />
+
+                            </StyledLink>
                         </div>
                     ))}
 
