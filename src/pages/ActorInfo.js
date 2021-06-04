@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
+import KnownForComp from '../components/KnownForComp';
 
 const ActorContainer = styled.div`
 position: relative;
 width: 100%;
-height: 100%;
+height: 80%;
 color:#fff;
-padding: 5rem;
+
 background-color: #141414;
 `
 const ActorWrapper = styled.div`
@@ -15,6 +16,7 @@ position: relative;
 width: 100%;
 height: 100%;
 display: flex;
+padding: 5rem;
 `
 
 const ActorImgContainer = styled.div`
@@ -32,7 +34,7 @@ height: 100%;
 const ActorDetials = styled.section`
 position: relative; 
 width: 75%;
-height: auto;
+height: 100%;
 display: flex; 
 flex-direction: column;
 `
@@ -110,6 +112,7 @@ const ActorInfo = () => {
 
                 </ActorDetials>
             </ActorWrapper>
+            <KnownForComp />
         </ActorContainer>
     )
 }
