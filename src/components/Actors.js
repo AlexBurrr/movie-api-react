@@ -3,6 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 import ActorCard from '../components/ActorCard'
 import { Link } from 'react-router-dom'
+import ScrollToTop from './ScrollToTop';
 
 
 const Container = styled.div`
@@ -58,6 +59,7 @@ const Actors = ({ x }) => {
     console.log(crew);
     return (
         <>
+            <ScrollToTop />
             <Title>Cast</Title>
             <Container>
 

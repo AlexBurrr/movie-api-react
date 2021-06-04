@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import axios from 'axios'
 import KnownForComp from '../components/KnownForComp';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
 
 const ActorContainer = styled.div`
 position: relative;
@@ -99,6 +100,7 @@ const ActorInfo = () => {
     console.log(actorInfo);
     return (
         <ActorContainer>
+            <ScrollToTop />
             <ActorWrapper>
                 <ActorImgContainer>
                     <ActorPicture src={imageurl + actorInfo.profile_path} alt='who?' />
