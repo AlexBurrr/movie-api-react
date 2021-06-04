@@ -130,7 +130,7 @@ const TVHero = () => {
 
             <HeroDetailsWrapper>
                 <HeroDetails>
-                    <HeroTitle>{heroData.title || heroData.name}</HeroTitle>
+                    <HeroTitle>{heroData.name}</HeroTitle>
                     <MiscDetails>
                         <ReactStars
                             count={5}

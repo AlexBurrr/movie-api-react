@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import KnownForComp from '../components/KnownForComp';
+import Footer from '../components/Footer';
 
 const ActorContainer = styled.div`
 position: relative;
@@ -113,6 +114,7 @@ const ActorInfo = () => {
                 </ActorDetials>
             </ActorWrapper>
             <KnownForComp />
+            <Footer />
         </ActorContainer>
     )
 }

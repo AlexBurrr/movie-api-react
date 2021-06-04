@@ -21,7 +21,7 @@ position: absolute;
 cursor: pointer;
 padding-top: 2rem;
 display: flex;
-overflow-x: scroll;`
+`
 
 const StyledLink = styled(Link)`
 color: #fff;

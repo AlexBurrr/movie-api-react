@@ -131,7 +131,7 @@ const HeroID = () => {
 
             <HeroDetailsWrapper>
                 <HeroDetails>
-                    <HeroTitle>{heroData.title === undefined ? heroData.name : heroData.title}</HeroTitle>
+                    <HeroTitle>{heroData.title}</HeroTitle>
                     <MiscDetails>
                         <ReactStars
                             count={5}
