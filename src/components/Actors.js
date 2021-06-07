@@ -59,7 +59,7 @@ const Actors = ({ x }) => {
     console.log(crew);
     return (
         <>
-            <ScrollToTop />
+            
             <Title>Cast</Title>
             <Container>
 
