@@ -6,7 +6,14 @@ position: relative;
 height: 15rem;
 width: 100%;
 background-color: #141414;
-padding: 5rem;`
+padding: 5rem;
+
+
+@media(max-width:1200px){
+    min-height: 100%;
+}
+
+`
 
 const FooterP = styled.p`
 padding-bottom: 2rem;
